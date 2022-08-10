@@ -1,8 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from "react-router-dom";
-import {inject, observer} from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import { IStore, IUserStore } from '../../store/interfaceStore';
-import { Button } from 'antd';
 
 interface IProps {
     userStore: IUserStore
@@ -20,8 +19,10 @@ class Login extends React.Component<LoginProps> {
     }
     render() {
         return (
-            <div>
-                <Button type="primary">点击登录</Button>
+            <div onClick={() => {
+                this.props.userStore.login();
+            }}>
+                用户名: {this.props.userStore.userName}
             </div>
         )
     }

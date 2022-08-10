@@ -8,6 +8,7 @@
 export interface IUserStore {
     userId: string
     userName: string
+    login: () => void
 }
 
 // store interFace

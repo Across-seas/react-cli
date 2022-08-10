@@ -5,15 +5,12 @@
  * @LastEditTime: 2019-09-03 11:06:32
  * @LastEditors: Please set LastEditors
  */
-import UserStroe from './userStore';
-import { IUserStore } from './interfaceStore';
+import userStore from './userStore';
+import { IStore } from './interfaceStore';
 
-class Store {
-   userStore: IUserStore;
 
-   constructor(){
-      this.userStore = new UserStroe();
-   }
+const Store:IStore = {
+   userStore
 }
 
-export default new Store();
+export default Store;

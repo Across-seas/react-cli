@@ -7,20 +7,16 @@
  */
 import {observable,action} from 'mobx';
 
-export default class UserStroe {
+class UserStore {
 
-    @observable userId: string;
-    @observable userName: string;
-
-    constructor(){
-        this.userId="0000";
-        this.userName="evolify";
-        this.login();
-    }
+    @observable userId: string = '';
+    @observable userName: string = 'means';
 
     @action login(){
         setTimeout(()=>{
             this.userName="Evolify"
-        },1500)
+        }, 200)
     }
 }
+
+export default new UserStore();
